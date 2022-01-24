@@ -1,12 +1,11 @@
 import os
 import yaml
 
-# Easy Usage
-# Run as a docker container: adamgardnerdt/monaco-generate-delete-file:v*
-
-# Advanced / Development
-# Prereqs
-# pip3 install pyyaml
+# Usage
+# 1. pip3 install pyyaml
+# 2. Save this file in the root monaco directory (when the monaco binary is)
+# 3. python3 generate-delete.file.py
+# 4. A delete.yaml file will be created for you
 
 # This script must be executed from the base directory (the same directory containing your monaco binary)
 # The script looks for values for the  "name" variable. If you DON'T use:
