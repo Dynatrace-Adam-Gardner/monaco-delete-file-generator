@@ -17,3 +17,9 @@ docker run --rm \
 -v="$(PWD):/app"
 adamgardnerdt/monaco-generate-delete-file:v0.1
 ```
+
+## Advanced (Build)
+
+```
+docker build -t adamgardnerdt/monaco-generate-delete-file:v0.1 .
+```
