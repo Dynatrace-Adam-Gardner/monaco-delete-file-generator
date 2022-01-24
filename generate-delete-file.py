@@ -29,14 +29,14 @@ def get_delete_values():
   # For each project, get configuration types
   for project in projects:
     if os.path.isdir(project):
-      #print(f"Printing project: {project.name}")
+      print(f"Printing project: {project.name}")
       
       # For each project get the configuration types
       # eg. auto-tag
       config_types = os.scandir(project)
       
       for config_type in config_types:
-        #print(f"Config type in {project.name} is now {config_type.name}")
+        print(f"Config type in {project.name} is now {config_type.name}")
         
         # Get files inside each config_type directory
         files = os.scandir(config_type)
@@ -65,7 +65,8 @@ def get_delete_values():
                         delete_values.append(f"{config_type.name}/{value['name']}")
               except yaml.YAMLError as exc:
                 print(exc)
-      return delete_values
+  
+  return delete_values
 
 def build_delete_output(delete_values):
   delete_output = {
